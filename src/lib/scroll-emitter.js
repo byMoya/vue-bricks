@@ -29,6 +29,7 @@ export default class ScrollEmitter {
     let el = isWindow ? document.documentElement : this.$el
     const scrollHeight = isWindow ? (el.scrollHeight || document.body.scrollHeight) : el.scrollHeight
     const scrollTop = isWindow ? (el.scrollTop || document.body.scrollTop) : el.scrollTop
+
     const viewHeight = window.innerHeight
     if (scrollTop + viewHeight + this.props.offset >= scrollHeight) {
       this.lazyResolve = true
